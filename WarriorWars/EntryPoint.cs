@@ -19,11 +19,7 @@ namespace WarriorWars
             Warrior goodGuy = new Warrior("Conan", Faction.GoodGuy);
             Warrior badGuy = new Warrior("Krul", Faction.BadGuy);
 
-
-            // Code need to inspect
-
-
-
+            // Fill up randomly the warriors List
 
             for (int i = 0; i < 20; i++)
             {
@@ -46,6 +42,8 @@ namespace WarriorWars
                (from w in warriors
                 where w.IsAlive == true && w.FACTION == Faction.BadGuy
                 select w).ToList();
+
+           
 
 
             while ((goodGuy.IsAlive && badGuy.IsAlive))
